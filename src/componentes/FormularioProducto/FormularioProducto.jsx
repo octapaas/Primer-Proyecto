@@ -1,6 +1,8 @@
+import styles from './FormularioProducto.module.css';
+
 function FormularioProducto({datosForm, manejarCambioInput, manejarEnvio}) {
     return (
-        <form onSubmit={manejarEnvio}>
+        <form onSubmit={manejarEnvio} className={styles.formulario}>
             <h3>Agregar Nuevo Producto</h3>
             <div>
                 <label htmlFor="Nombre">Nombre del Producto</label>

@@ -1,0 +1,31 @@
+.formulario {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.formulario div {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.formulario button {
+    color: black;
+    background-color: yellow;
+    width: 100%;
+    max-width: 160px;
+    margin: 10px auto 0 auto;
+    padding: 10px 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

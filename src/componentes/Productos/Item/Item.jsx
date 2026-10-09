@@ -57,7 +57,7 @@ function Item({ id, nombre, precio, stock, imagen }) {
                 <p>{cantidad}</p>
                 <button onClick={incrementar}>+</button>
             </div>
-            <button onClick={agregarAlCarrito}>Agregar al Carrito</button>
+            <button onClick={agregarAlCarrito} className={styles.agregar}>Agregar al Carrito</button>
         </div>
     );
 }

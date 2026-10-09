@@ -1,0 +1,13 @@
+.footer{
+    background-color: yellow;
+    padding: 10px;
+    text-align: "center";
+    color: white;
+}
+
+.footer h1,
+.footer h3,
+.footer p {
+    color: black;
+    font-weight: 500;
+}
