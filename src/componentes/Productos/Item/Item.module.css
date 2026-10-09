@@ -1,0 +1,26 @@
+.card {
+    border: 2px solid yellow;
+    padding-bottom: 20px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.contador {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+}
+
+.favorito {
+    font-size: 24px;
+    cursor: pointer;
+}

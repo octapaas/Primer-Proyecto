@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "nombre": "Rodrigo Rodriguez",
+        "email": "rodrirodri@gmail.com",
+        "puesto": "CEO"
+    },
+    {
+        "id": "2",
+        "nombre": "Martin Martinez",
+        "email": "tinchotinchez@gmail.com",
+        "puesto": "Desarrollador"
+    },
+    {
+        "id": "3",
+        "nombre": "Pedro Perez",
+        "email": "pepepe@gmail.com",
+        "puesto": "Marketing"
+    }
+]
