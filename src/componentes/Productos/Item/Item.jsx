@@ -44,7 +44,7 @@ function Item({ id, nombre, precio, stock, imagen }) {
         <div className={styles.card}>
             <div className={styles.cardTitle}>
                 <h3>{nombre}</h3>
-                <img src={imagen} alt={nombre} style={{ width: '200px', height: '200px', display: 'block' }} />
+                <img src={imagen} alt={nombre} className={styles.cardImage} />
 
             </div>
             <span className={styles.favorito} onClick={marcarComoFavorito}
