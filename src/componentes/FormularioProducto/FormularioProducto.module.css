@@ -11,10 +11,21 @@
 .formulario div {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
     gap: 6px;
     text-align: left;
     font-size: 14px;
     font-weight: bold;
+}
+
+.formulario label {
+    width: 180px;
+}
+
+.formulario input {
+    flex: 1; 
+    max-width: 300px;
 }
 
 .formulario button {

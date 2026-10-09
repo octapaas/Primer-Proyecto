@@ -5,16 +5,16 @@ function FormularioProducto({datosForm, manejarCambioInput, manejarEnvio}) {
         <form onSubmit={manejarEnvio} className={styles.formulario}>
             <h3>Agregar Nuevo Producto</h3>
             <div>
-                <label htmlFor="Nombre">Nombre del Producto</label>
-                <input type="text" name="Nombre" placeholder="Teclado Mecanico" onChange={manejarCambioInput} />
+                <label htmlFor="Nombre">Nombre del Producto:</label>
+                <input type="text" id="Nombre" name="Nombre" placeholder="Teclado Mecanico" onChange={manejarCambioInput} />
             </div>
             <div>
-                <label htmlFor="Nombre">Nombre del Producto</label>
-                <input type="text" name="Nombre" placeholder="Teclado Mecanico" onChange={manejarCambioInput} />
+                <label htmlFor="Precio">Precio del Producto:</label>
+                <input type="text" id="Precio" name="Precio" placeholder="150000" onChange={manejarCambioInput} />
             </div>
             <div>
-                <label htmlFor="Nombre">Nombre del Producto</label>
-                <input type="text" name="Nombre" placeholder="Teclado Mecanico" onChange={manejarCambioInput} />
+                <label htmlFor="Stock">Cantidad del Producto:</label>
+                <input type="text" id="Stock" name="Stock" placeholder="10" onChange={manejarCambioInput} />
             </div>
             <div>
                 <label>Imagen:</label>
