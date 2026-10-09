@@ -2,21 +2,21 @@
     {
         "id": "1",
         "nombre": "Resident Evil Requiem",
-        "precio": 120000,
+        "precio": 85000,
         "stock": 15,
         "imagen": "/data/images/productos/Resident-Evil-Requiem.jpg"
     },
     {
         "id": "2",
         "nombre": "Red Dead Redemption 2",
-        "precio": 45000,
+        "precio": 110500,
         "stock": 25,
         "imagen": "https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png"
     },
     {
         "id": "3",
         "nombre": "Super Smash Bros Ultimate",
-        "precio": 15000,
+        "precio": 116.500,
         "stock": 50,
         "imagen":"/data/images/productos/Super Smash Bros Ultimate.jpg"
     }
