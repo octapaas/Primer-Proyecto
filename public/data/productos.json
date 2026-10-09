@@ -2,7 +2,7 @@
     {
         "id": "1",
         "nombre": "Resident Evil Requiem",
-        "precio": 12000,
+        "precio": 120000,
         "stock": 15,
         "imagen": "/data/images/productos/Resident-Evil-Requiem.jpg"
     },
@@ -18,6 +18,6 @@
         "nombre": "Super Smash Bros Ultimate",
         "precio": 15000,
         "stock": 50,
-        "imagen":"https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/store/software/switch/70010000012332/ac4d1fc9824876ce756406f0525d50c57ded4b2a666f6dfe40a6ac5c3563fad9"
+        "imagen":"/data/images/productos/Super Smash Bros Ultimate.jpg"
     }
 ]

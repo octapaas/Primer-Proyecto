@@ -3,18 +3,21 @@
         "id": "1",
         "nombre": "Rodrigo Rodriguez",
         "email": "rodrirodri@gmail.com",
-        "puesto": "CEO"
+        "puesto": "CEO",
+        "imagen": "/data/images/equipo/stockphoto.jpg"
     },
     {
         "id": "2",
         "nombre": "Martin Martinez",
         "email": "tinchotinchez@gmail.com",
-        "puesto": "Desarrollador"
+        "puesto": "Desarrollador",
+        "imagen": "/data/images/equipo/stockphoto.jpg"
     },
     {
         "id": "3",
         "nombre": "Pedro Perez",
         "email": "pepepe@gmail.com",
-        "puesto": "Marketing"
+        "puesto": "Marketing",
+        "imagen": "/data/images/equipo/stockphoto.jpg"
     }
 ]
