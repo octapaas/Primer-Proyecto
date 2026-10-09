@@ -16,7 +16,7 @@
     {
         "id": "3",
         "nombre": "Super Smash Bros Ultimate",
-        "precio": 116.500,
+        "precio": 116500,
         "stock": 50,
         "imagen":"/data/images/productos/Super Smash Bros Ultimate.jpg"
     }
