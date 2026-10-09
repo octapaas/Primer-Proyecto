@@ -4,7 +4,7 @@
         "nombre": "Resident Evil Requiem",
         "precio": 12000,
         "stock": 15,
-        "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMB_DPwnfTY3OMWDCFCiwyeQRt8iatrEKRBnTtOYoJaw&s=10"
+        "imagen": "/data/images/productos/Resident-Evil-Requiem.jpg"
     },
     {
         "id": "2",
