@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css';
 
 function Header() {
@@ -13,18 +14,21 @@ function Header() {
                     </p>
                 </div>
                 <nav>
-                    <a href="#">
+                    <Link to="/">
                         Inicio
-                    </a>
-                    <a href="#">
+                    </Link>
+                    <Link to="/tienda">
                         Tienda
-                    </a>
-                    <a href="#">
+                    </Link>
+                    <Link to="/contacto">
                         Contacto
-                    </a>
-                    <a href="#">
+                    </Link>
+                    <Link to="/carrito">
                         Carrito
-                    </a>
+                    </Link>
+                    <Link to="/nuevo">
+                        Nuevo Producto
+                    </Link>
                 </nav>
             </div>
         </header>

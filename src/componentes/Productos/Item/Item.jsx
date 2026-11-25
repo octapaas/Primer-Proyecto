@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Item.module.css';
 import { useState, useEffect } from 'react';
 
@@ -57,8 +58,11 @@ function Item({ id, nombre, precio, stock, imagen }) {
                 <p>{cantidad}</p>
                 <button onClick={incrementar}>+</button>
             </div>
+            <Link to={`/tienda/${id}`}>Descripción</Link>
             <button onClick={agregarAlCarrito} className={styles.agregar}>Agregar al Carrito</button>
         </div>
+
+
     );
 }
 

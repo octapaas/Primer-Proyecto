@@ -1,0 +1,68 @@
+.card {
+    border: 2px solid yellow;
+    padding-bottom: 20px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.card h3,
+.card p {
+    color: white;
+}
+
+.contador {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.contador button {
+    background-color: yellow;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contador button:active {
+  transform: scale(0.95);    
+}
+
+.cardTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.cardImage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.favorito {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.agregar {
+    background-color: yellow;
+    color: black;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.agregar button:active {
+  transform: scale(0.95);    
+}

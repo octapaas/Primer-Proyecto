@@ -4,20 +4,26 @@
         "nombre": "Resident Evil Requiem",
         "precio": 85000,
         "stock": 15,
-        "imagen": "/data/images/productos/Resident-Evil-Requiem.jpg"
+        "imagen": "/data/images/productos/Resident-Evil-Requiem.jpg",
+        "destacado": true,
+        "descripcion": "Resident Evil Requiem es un juego de acción y terror en tercera persona que sigue la historia de los personajes de la saga Resident Evil mientras luchan contra hordas de zombis y criaturas mutantes en un mundo post-apocalíptico."
     },
     {
         "id": "2",
         "nombre": "Red Dead Redemption 2",
         "precio": 110500,
         "stock": 25,
-        "imagen": "https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png"
+        "imagen": "https://image.api.playstation.com/cdn/UP1004/CUSA03041_00/Hpl5MtwQgOVF9vJqlfui6SDB5Jl4oBSq.png",
+        "destacado": false,
+        "descripcion": "Red Dead Redemption 2 es un juego de acción y aventura en mundo abierto ambientado en el Viejo Oeste, que sigue la historia de Arthur Morgan, un forajido que lucha por sobrevivir mientras enfrenta la ley y los peligros del salvaje oeste."
     },
     {
         "id": "3",
         "nombre": "Super Smash Bros Ultimate",
         "precio": 116500,
         "stock": 50,
-        "imagen":"/data/images/productos/Super Smash Bros Ultimate.jpg"
+        "imagen":"/data/images/productos/Super Smash Bros Ultimate.jpg",
+        "destacado": true,
+        "descripcion": "Super Smash Bros Ultimate es un juego de lucha que reúne a personajes de diferentes franquicias de videojuegos en un solo juego, permitiendo a los jugadores luchar entre sí en una variedad de escenarios y modos de juego."
     }
 ]
