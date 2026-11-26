@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import styles from './Item.module.css';
 import { useState, useEffect } from 'react';
+import { useCart } from '../../../Context/CartContext';
 
 function Item({ id, nombre, precio, stock, imagen }) {
 
     const [cantidad, setCantidad] = useState(0);
+
+    const { addToCart } = useCart();
 
     const incrementar = () => {
         if (cantidad < stock) {
@@ -20,7 +23,8 @@ function Item({ id, nombre, precio, stock, imagen }) {
 
     }
 
-    const agregarAlCarrito = () => {
+    const handleAddToCart = () => {
+        addToCart({ id, nombre, precio, stock, imagen }, cantidad);
         if (cantidad > 1) {
             alert(`Agregaste ${cantidad} unidades de ${nombre} al carrito`)
         } else if (cantidad == 1) {
@@ -59,7 +63,7 @@ function Item({ id, nombre, precio, stock, imagen }) {
                 <button onClick={incrementar}>+</button>
             </div>
             <Link to={`/tienda/${id}`}>Descripción</Link>
-            <button onClick={agregarAlCarrito} className={styles.agregar}>Agregar al Carrito</button>
+            <button onClick={handleAddToCart} className={styles.agregar}>Agregar al Carrito</button>
         </div>
 
 

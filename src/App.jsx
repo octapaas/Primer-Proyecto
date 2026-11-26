@@ -6,6 +6,7 @@ import EquipoContainer from './componentes/Equipo/EquipoContainer/EquipoContaine
 import FormularioContainer from './componentes/FormularioContainer/FormularioContainer'
 import { Route, Routes } from 'react-router-dom'
 import ItemDescripcion from './componentes/Productos/ItemDescripcion/ItemDescripcion'
+import Cart from './componentes/Cart/Cart'
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Route path="*" element={<h1>404 - Página no encontrada</h1>} />
 
           <Route path="/tienda/:id" element={<ItemDescripcion />} />
+
+          <Route path="/carrito" element={<Cart />} />
         </Route>
       </Routes>
     </>

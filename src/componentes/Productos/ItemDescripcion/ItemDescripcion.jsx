@@ -14,27 +14,27 @@ function ItemDescripcion() {
     const [cargando, setCargando] = useState(true);
 
     useEffect(() => {
-            fetch('/data/productos.json')
-                .then((respuesta) => {
-                    if (!respuesta.ok) {
-                        throw new Error('No se pudo cargar la información de los productos');
-                    }
-                    return respuesta.json();
-                })
-                .then((datos) => {
-                    setProductos(datos);
-                })
-                .catch((error) => {
-                    setError(error.message);
-                })
-                .finally(() => {
-                    setCargando(false);
-                });
-        }, []);
+        fetch('/data/productos.json')
+            .then((respuesta) => {
+                if (!respuesta.ok) {
+                    throw new Error('No se pudo cargar la información de los productos');
+                }
+                return respuesta.json();
+            })
+            .then((datos) => {
+                setProductos(datos);
+            })
+            .catch((error) => {
+                setError(error.message);
+            })
+            .finally(() => {
+                setCargando(false);
+            });
+    }, []);
 
-        const productoID = productos.find((producto) => producto.id === id);
 
-        const [esFavorito, setEsFavorito] = useState(false);
+
+    const [esFavorito, setEsFavorito] = useState(false);
 
     useEffect(() => {
 
@@ -43,7 +43,7 @@ function ItemDescripcion() {
     const [cantidad, setCantidad] = useState(0);
 
     const incrementar = () => {
-        if (cantidad < stock) {
+        if (cantidad < productoID.stock) {
             setCantidad(cantidad + 1);
         }
 
@@ -58,9 +58,9 @@ function ItemDescripcion() {
 
     const agregarAlCarrito = () => {
         if (cantidad > 1) {
-            alert(`Agregaste ${cantidad} unidades de ${nombre} al carrito`)
+            alert(`Agregaste ${cantidad} unidades de ${productoID.nombre} al carrito`)
         } else if (cantidad == 1) {
-            alert(`Agregaste ${cantidad} unidad de ${nombre} al carrito`)
+            alert(`Agregaste ${cantidad} unidad de ${productoID.nombre} al carrito`)
         } else {
             alert(`No hay productos en el carrito. Por favor, seleccione la cantidad que desea agregar`)
         }
@@ -70,6 +70,17 @@ function ItemDescripcion() {
     const marcarComoFavorito = () => {
         setEsFavorito(!esFavorito);
     }
+
+    const productoID = productos.find((producto) => producto.id === id);
+
+    if (cargando) {
+        return <p>Cargando producto...</p>;
+    }
+
+    if (error) {
+        return <p>Error: {error}</p>;
+    }
+
 
     return (
         <div className={styles.card}>
@@ -81,6 +92,7 @@ function ItemDescripcion() {
             <span className={styles.favorito} onClick={marcarComoFavorito}
             > {esFavorito ? '⭐' : '☆'}
             </span>
+            <h3>{productoID.descripcion}</h3>
             <p>Precio: ${productoID.precio}</p>
             <p>Stock: {productoID.stock}</p>
             <div className={styles.contador}>
@@ -88,7 +100,7 @@ function ItemDescripcion() {
                 <p>{cantidad}</p>
                 <button onClick={incrementar}>+</button>
             </div>
-            <Link to={`/tienda/${id}`}>Descripción</Link>
+            <Link to={`/tienda`}>Volver a la Tienda</Link>
             <button onClick={agregarAlCarrito} className={styles.agregar}>Agregar al Carrito</button>
         </div>
 
