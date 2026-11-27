@@ -3,7 +3,7 @@ import styles from '../Productos/Item/Item.module.css';
 
 const Cart = () => {
 
-    const { cart, clearCart, getCartTotal } = useCart();
+    const { cart, clearCart, getCartTotal, removeItem, addToCart, decreaseQuantity } = useCart();
 
     if (cart.length === 0) {
         return (
@@ -21,9 +21,18 @@ const Cart = () => {
                 <div key={item.id} className="cart-item">
                     <img src={item.imagen} alt={item.nombre} className={styles.cardImage}></img>
                     <h4>{item.nombre}</h4>
-                    <p>Cantidad: {item.quantity}</p>
+                    <div>
+                        <button onClick={() => decreaseQuantity(item.id)}>-</button>
+                        <span> Cantidad: {item.quantity} </span>
+                        <button
+                            onClick={() => addToCart(item, 1)}
+                            disabled={item.quantity >= item.stock}>
+                            +
+                        </button>
+                    </div>
                     <p>Precio unitario: ${item.precio}</p>
                     <p>Subtotal: ${item.precio * item.quantity}</p>
+                    <button onClick={() => removeItem(item.id)}>Eliminar los Artículos</button>
                 </div>
             ))}
             <hr />

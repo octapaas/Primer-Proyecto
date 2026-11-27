@@ -7,10 +7,10 @@ function Item({ id, nombre, precio, stock, imagen }) {
 
     const [cantidad, setCantidad] = useState(0);
 
-    const { addToCart } = useCart();
+    const { addToCart, getCurrentQuantity } = useCart();
 
     const incrementar = () => {
-        if (cantidad < stock) {
+        if (cantidad + getCurrentQuantity(id) < stock) {
             setCantidad(cantidad + 1);
         }
 
@@ -24,11 +24,15 @@ function Item({ id, nombre, precio, stock, imagen }) {
     }
 
     const handleAddToCart = () => {
-        addToCart({ id, nombre, precio, stock, imagen }, cantidad);
+
         if (cantidad > 1) {
+            addToCart({ id, nombre, precio, stock, imagen }, cantidad);
             alert(`Agregaste ${cantidad} unidades de ${nombre} al carrito`)
+            setCantidad(0);
         } else if (cantidad == 1) {
+            addToCart({ id, nombre, precio, stock, imagen }, cantidad);
             alert(`Agregaste ${cantidad} unidad de ${nombre} al carrito`)
+            setCantidad(0);
         } else {
             alert(`No hay productos en el carrito. Por favor, seleccione la cantidad que desea agregar`)
         }
@@ -36,10 +40,6 @@ function Item({ id, nombre, precio, stock, imagen }) {
     }
 
     const [esFavorito, setEsFavorito] = useState(false);
-
-    useEffect(() => {
-
-    }, []);
 
     const marcarComoFavorito = () => {
         setEsFavorito(!esFavorito);
@@ -64,6 +64,7 @@ function Item({ id, nombre, precio, stock, imagen }) {
             </div>
             <Link to={`/tienda/${id}`}>Descripción</Link>
             <button onClick={handleAddToCart} className={styles.agregar}>Agregar al Carrito</button>
+            <p>En el carrito: {getCurrentQuantity(id)}</p>
         </div>
 
 

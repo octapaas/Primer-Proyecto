@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import styles from './ItemDescripcion.module.css';
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../../firestore/config";
 
 function ItemDescripcion() {
 
@@ -14,16 +16,13 @@ function ItemDescripcion() {
     const [cargando, setCargando] = useState(true);
 
     useEffect(() => {
-        fetch('/data/productos.json')
-            .then((respuesta) => {
-                if (!respuesta.ok) {
-                    throw new Error('No se pudo cargar la información de los productos');
-                }
-                return respuesta.json();
-            })
-            .then((datos) => {
-                setProductos(datos);
-            })
+        const productosDB = collection(db, "productos");
+
+        getDocs(productosDB).then((resp) => {
+            setProductos(resp.docs.map((doc) => {
+                return { id: doc.id, ...doc.data() }
+            }))
+        })
             .catch((error) => {
                 setError(error.message);
             })
